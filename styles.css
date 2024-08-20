@@ -75,7 +75,8 @@ button {
 }
 
 .add-row-btn,
-.details-btn {
+.details-btn,
+.show-jobs-btn {
   border: 2px solid blue;
   background-color: white;
   color: blue;
@@ -114,11 +115,11 @@ input[type="time"] {
 }
 
 .submit-btn {
-  width: fit-content;
   background-color: blue;
   color: white;
   border: none;
-  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 12px 32px;
 }
 
