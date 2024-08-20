@@ -1,3 +1,7 @@
+import Job from "../models/Job.js";
+import Request from "../models/Request.js";
+import { jobRepositoryInstance } from "../repository/JobRepository.js";
+
 // Add new row functionality
 
 document.getElementById("add-row-btn").addEventListener("click", () => {
