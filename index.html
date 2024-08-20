@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="request-page">
+      <div class="header">
+        <h3>Service Agent by SAP</h3>
+      </div>
+      <form id="form" class="form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter Name" />
+
+        <label for="api-endpoint">API Details</label>
+        <div class="api-details">
+          <select id="http-request">
+            <option value="post">Post</option>
+            <option value="get">Get</option>
+            <option value="put">Put</option>
+            <option value="delete">Delete</option>
+          </select>
+
+          <input
+            type="url"
+            name="api-endpoint"
+            class="api-endpoint"
+            id="api-endpoint"
+            placeholder="API endpoint"
+          />
+        </div>
+
+        <label for="headers">Headers</label>
+        <div class="headers-section">
+          <table id="headers-table">
+            <thead>
+              <tr>
+                <th>
+                  <label class="key-label" for="keys">Key</label>
+                </th>
+                <th>
+                  <label class="value-label" for="values">Value</label>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    id="key1"
+                    name="key1"
+                    placeholder="Enter Key"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="value1"
+                    name="value1"
+                    placeholder="Enter Value"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    id="key2"
+                    name="key2"
+                    placeholder="Enter Key"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="value2"
+                    name="value2"
+                    placeholder="Enter Value"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    id="key3"
+                    name="key3"
+                    placeholder="Enter Key"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="value3"
+                    name="value3"
+                    placeholder="Enter Value"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-row-btn" class="add-row-btn">
+            + Add Row
+          </button>
+        </div>
+
+        <legend>Execution</legend>
+        <div class="execution-container">
+          <input
+            type="radio"
+            name="execution"
+            id="execute-now"
+            value="execute-now"
+          />
+          <label for="execute-now">Execute now</label>
+        </div>
+        <div class="execution-container">
+          <input
+            type="radio"
+            name="execution"
+            id="schedule"
+            value="schedule"
+            checked
+          />
+          <label for="schedule">Schedule</label>
+          <div class="date-time-container">
+            <div class="date-column">
+              <label for="date" class="date-label">Date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+            <div class="time-column">
+              <label for="time" class="time-label">Time</label>
+              <input id="settime" type="time" step="1" />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
