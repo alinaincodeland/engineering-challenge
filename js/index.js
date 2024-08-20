@@ -31,7 +31,13 @@ const submitJob = (event) => {
   event.preventDefault();
 
   // Gather form data
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("name").value.trim();
+
+  if (!name) {
+    alert("Job name is required.");
+    return;
+  }
+
   const httpMethod = document.getElementById("http-request").value;
   const apiEndpoint = document.getElementById("api-endpoint").value;
 
