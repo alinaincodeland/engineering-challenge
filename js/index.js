@@ -20,3 +20,78 @@ document.getElementById("add-row-btn").addEventListener("click", () => {
 
   tbody.appendChild(newRow);
 });
+
+// Submit new job functionality
+
+const submitJob = (event) => {
+  event.preventDefault();
+
+  // Gather form data
+  const name = document.getElementById("name").value;
+  const httpMethod = document.getElementById("http-request").value;
+  const apiEndpoint = document.getElementById("api-endpoint").value;
+
+  const headers = {};
+  const rows = document.querySelectorAll("#headers-table tbody tr");
+  rows.forEach((row) => {
+    const inputSelector = row.querySelectorAll('input[type="text"]');
+    const key = inputSelector[0].value;
+    const value = inputSelector[1].value;
+    if (key && value) {
+      headers[key] = value;
+    }
+  });
+
+  const executeNow = document.getElementById("execute-now").checked;
+  let executionTime;
+
+  if (executeNow) {
+    executionTime = new Date().toISOString();
+  } else {
+    const selectedDate = new Date(
+      `${document.getElementById("date").value}T${
+        document.getElementById("settime").value
+      }`
+    );
+
+    const now = new Date();
+
+    // Validate that the selected date is in the future
+    if (selectedDate <= now) {
+      alert("Please schedule the job in the future.");
+      return;
+    }
+    executionTime = selectedDate.toISOString();
+  }
+
+  // Create Request and Job objects
+  const request = new Request(
+    httpMethod,
+    apiEndpoint,
+    headers,
+    "",
+    executionTime
+  );
+
+  const job = new Job(name, generateUniqueId(), request);
+
+  // Add job to repository
+  jobRepositoryInstance.createJob(job);
+
+  jobRepositoryInstance.printJobs();
+
+  alert("Job created successfully!");
+
+  window.location.href = "jobs.html";
+};
+
+document.getElementById("form").addEventListener("submit", submitJob);
+document.getElementById("form").reset();
+
+// Generate a unique ID for a job
+function generateUniqueId() {
+  const min = 100000;
+  const max = 999999;
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  return randomNumber.toString() + "dev";
+}
