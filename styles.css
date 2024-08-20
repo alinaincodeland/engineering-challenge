@@ -76,7 +76,8 @@ button {
 
 .add-row-btn,
 .details-btn,
-.show-jobs-btn {
+.show-jobs-btn,
+.request-page-btn {
   border: 2px solid blue;
   background-color: white;
   color: blue;
@@ -164,4 +165,10 @@ h2 {
 .job-list th,
 .job-list td {
   text-align: center;
+}
+
+.request-page-btn {
+  margin: auto;
+  margin-top: 2rem;
+  width: 20rem;
 }
