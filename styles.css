@@ -1,0 +1,166 @@
+body {
+  font-family: Garamond, serif;
+}
+
+.request-page,
+.status-page {
+  background-color: #f5f6f6;
+  height: 100vh;
+}
+
+.header {
+  background-color: white;
+  padding-inline: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+label,
+legend {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.form {
+  margin-inline: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 40vw;
+  gap: 10px;
+}
+
+select {
+  width: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.api-endpoint {
+  height: 42px;
+  margin: 8px 0 8px 4px;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+.key-label,
+.value-label {
+  text-align: left !important;
+  font-weight: 600;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 6px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-row-btn,
+.details-btn {
+  border: 2px solid blue;
+  background-color: white;
+  color: blue;
+}
+
+.api-details {
+  display: flex;
+}
+
+input[type="radio"] {
+  width: fit-content;
+}
+
+.date-time-container {
+  margin-left: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.date-label,
+.time-label {
+  margin-top: 12px;
+  font-size: small;
+  font-weight: 400;
+}
+
+.date-column,
+.time-column {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 15vw;
+}
+
+.submit-btn {
+  width: fit-content;
+  background-color: blue;
+  color: white;
+  border: none;
+  margin-left: 1.5rem;
+  padding: 12px 32px;
+}
+
+.submit-btn:hover {
+  background-color: #1434a4;
+}
+
+.list-container {
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-inline: auto;
+}
+
+#show-favorites-btn {
+  color: blue;
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.star-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.job-list {
+  padding: 1rem 0;
+  border: 1px solid lightgray;
+  background-color: white;
+  font-size: 16px;
+}
+
+.job-list th,
+.job-list td {
+  text-align: center;
+}
