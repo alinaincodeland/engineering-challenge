@@ -22,15 +22,7 @@ This project is a Job Scheduler and Manager application that allows users to cre
 
 1. Clone the repository
 2. cd bpi-engineering-challenge
-3. Right click on index.html file -> open with live server OR
-   access Request Page at:
-   ```
-   http://localhost:5500/
-   ```
-   and Status page at:
-   ```
-   http://localhost:5500/jobs.html
-   ```
+3. Right click on index.html file -> open with live server
 
 ### Usage
 
