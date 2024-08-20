@@ -65,6 +65,7 @@ const submitJob = (event) => {
       alert("Please schedule the job in the future.");
       return;
     }
+
     executionTime = selectedDate.toISOString();
   }
 
@@ -81,8 +82,6 @@ const submitJob = (event) => {
 
   // Add job to repository
   jobRepositoryInstance.createJob(job);
-
-  jobRepositoryInstance.printJobs();
 
   alert("Job created successfully!");
 
