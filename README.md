@@ -44,3 +44,9 @@ This project is a Job Scheduler and Manager application that allows users to cre
 
 - Scheduled: Jobs scheduled for a future date are marked as "Scheduled" in orange.
 - Completed: Jobs executed immediately or in the past are marked as "Completed" in green.
+
+### A little about myself
+
+I'm a frontend engineer with a creative twist, calling Berlin home. With almost two years of experience, I’ve been diving into the dynamic world of web development working primarily with Ruby, JavaScript, React, Angular and other technologies. I'm am enthusiastic about applying my current knowledge while constantly pushing myself to learn more. I thrive in forward-thinking environments that value mentorship and diversity. In my free time, I am a dog cuddler, analog photographer, collagist and a cyclist following the sun.
+
+![Phoebs](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3R4M3A4MG9sNTFjM3ZueWYwZHZmbzlnejdiNnR2b3prcHNwbWw1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QBGfW8HqzXzYDojCqo/giphy.gif)
